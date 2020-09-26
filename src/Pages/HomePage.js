@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import { Typography, Container, Button } from "@material-ui/core";
+import { Container, ListItemText, ListItem, List } from "@material-ui/core";
 
 import { sections } from "../pages";
 
@@ -10,16 +10,30 @@ const HomePage = () => {
 
   return (
     <Container>
-      {sections.map((section) => (
-        <React.Fragment key={section.title}>
-          <Typography variant="h3">{section.title}</Typography>
-          {section.pages.map((page) => (
-            <Button key={page.url} onClick={() => history.push(page.url)}>
-              {page.title}
-            </Button>
-          ))}
-        </React.Fragment>
-      ))}
+      <List>
+        {sections.map((section) => (
+          <React.Fragment key={section.title}>
+            <ListItem>
+              <ListItemText
+                primaryTypographyProps={{ variant: "h3" }}
+                primary={section.title}
+              />
+            </ListItem>
+            {section.pages.map((page) => (
+              <ListItem
+                button
+                key={page.url}
+                onClick={() => history.push(page.url)}
+              >
+                <ListItemText
+                  primaryTypographyProps={{ variant: "h5" }}
+                  primary={page.title}
+                />
+              </ListItem>
+            ))}
+          </React.Fragment>
+        ))}
+      </List>
     </Container>
   );
 };
