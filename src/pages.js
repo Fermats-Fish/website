@@ -3,10 +3,12 @@ import React from "react";
 import HomePage from "./Pages/HomePage";
 import UnityProject from "./Components/UnityProject";
 
-const unityProject = (project, title) => ({
+const unityProject = (project, title, description) => ({
   title: title,
   url: "/" + project,
-  component: () => <UnityProject title={title} project={project} />,
+  component: () => (
+    <UnityProject title={title} project={project} description={description} />
+  ),
 });
 
 const pages = {
@@ -14,7 +16,12 @@ const pages = {
     url: "/",
     component: HomePage,
   },
-  ld38: unityProject("ld38", "Ludum Dare 38 - Two Dot"),
+  ld38: unityProject("ld38", "Ludum Dare 38 - Two Dot", [
+    "This is a test",
+    "a test",
+    "",
+    "a test",
+  ]),
   ld39: unityProject("ld39", "Ludum Dare 39 - Don't Go Flat"),
   ld39Post: unityProject("ld39-post", "Don't Go Flat 1.1 (Post Competition)"),
   ld40: unityProject("ld40", "Ludum Dare 40 - Stay Alive"),
@@ -56,8 +63,8 @@ export const sections = [
       pages.ld42,
       pages.ld43,
       pages.ld45,
-      pages.ld46,
       pages.reasonableResearch,
+      pages.ld46,
       pages.wesbite,
     ],
   },
