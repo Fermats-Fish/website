@@ -28,7 +28,7 @@ const pages = {
   ld45: unityProject("ld45", "Ludum Dare 45 - Stay Alive 2 Survive"),
   ld46: unityProject(
     "ld46",
-    "Ludum Dare 45 (Team Submission) - Game of Trees - A Song of Bears and Fire"
+    "Ludum Dare 46 (Team Submission) - Game of Trees - A Song of Bears and Fire"
   ),
   reasonableResearch: unityProject(
     "reasonable-research",
