@@ -2,9 +2,8 @@ import React from "react";
 import { Typography, makeStyles, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  title: {
-    textAlign: "center",
-    paddingTop: theme.spacing(3),
+  unityItem: {
+    marginTop: -theme.spacing(3),
   },
   descriptionItem: {
     width: 960,
@@ -14,13 +13,8 @@ const useStyles = makeStyles((theme) => ({
 const UnityProject = ({ title, project, description }) => {
   const classes = useStyles();
   return (
-    <Grid container direction="column" alignItems="center">
-      <Grid item>
-        <Typography variant="h3" className={classes.title}>
-          {title}
-        </Typography>
-      </Grid>
-      <Grid item>
+    <>
+      <Grid item className={classes.unityItem}>
         <iframe
           style={{ width: 960, height: 700, border: "none" }}
           title={title}
@@ -28,12 +22,12 @@ const UnityProject = ({ title, project, description }) => {
         ></iframe>
       </Grid>
       {description &&
-        description.map((x) => (
-          <Grid className={classes.descriptionItem} item>
+        description.map((x, index) => (
+          <Grid className={classes.descriptionItem} key={index} item>
             <Typography>{x === "" ? "\u200b" : x}</Typography>
           </Grid>
         ))}
-    </Grid>
+    </>
   );
 };
 

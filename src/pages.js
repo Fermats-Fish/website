@@ -2,6 +2,8 @@ import React from "react";
 
 import HomePage from "./Pages/HomePage";
 import UnityProject from "./Components/UnityProject";
+import AboutMePage from "./Pages/AboutMePage";
+import { Grid } from "@material-ui/core";
 
 const unityProject = (project, title, description) => ({
   title: title,
@@ -45,12 +47,23 @@ const pages = {
     title: "This Website",
     url: "/website",
     component: () => (
-      <iframe style={{ height: 600 }} src="/" title="Website"></iframe>
+      <Grid item style={{ width: "100%" }}>
+        <iframe style={{ height: 600 }} src="/" title="Website"></iframe>
+      </Grid>
     ),
+  },
+  about: {
+    title: "About Me",
+    url: "/about",
+    component: AboutMePage,
   },
 };
 
 export const sections = [
+  {
+    title: "About",
+    pages: [pages.about],
+  },
   {
     title: "Projects",
     pages: [
