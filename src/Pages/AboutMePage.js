@@ -4,7 +4,7 @@ import { Grid, Typography } from "@material-ui/core";
 
 const AboutMePage = ({ ...otherProps }) => {
   return (
-    <Grid container direction="column" spacing={3}>
+    <>
       <Grid item>
         <Typography>
           I am a junior software developer with experience in full stack and RPA
@@ -46,7 +46,7 @@ const AboutMePage = ({ ...otherProps }) => {
           thinking to going tramping and listening to classical music.
         </Typography>
       </Grid>
-    </Grid>
+    </>
   );
 };
 

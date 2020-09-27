@@ -55,6 +55,7 @@ const pages = {
   about: {
     title: "About Me",
     url: "/about",
+    align: "flex-start",
     component: AboutMePage,
   },
 };

@@ -10,8 +10,12 @@ const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(1),
   },
+  titleItem: {
+    width: "100%",
+  },
   title: {
-    padding: theme.spacing(3),
+    paddingTop: theme.spacing(3),
+    textAlign: "center",
   },
 }));
 
@@ -21,27 +25,31 @@ const App = () => {
     <BrowserRouter>
       <Navigation />
       <Container className={classes.container}>
-        <Grid container direction="column" alignItems="center">
-          <Grid item></Grid>
-          {Object.keys(pages).map((key) => {
-            const { url, title, component: Component } = pages[key];
-            return (
-              <Route
-                key={url}
-                path={url}
-                exact
-                component={() => (
-                  <>
+        {Object.keys(pages).map((key) => {
+          const { url, title, component: Component, align } = pages[key];
+          return (
+            <Route
+              key={url}
+              path={url}
+              exact
+              component={() => (
+                <Grid
+                  container
+                  direction="column"
+                  alignItems={align || "center"}
+                  spacing={3}
+                >
+                  <Grid item className={classes.titleItem}>
                     <Typography variant="h3" className={classes.title}>
                       {title}
                     </Typography>
-                    <Component />
-                  </>
-                )}
-              />
-            );
-          })}
-        </Grid>
+                  </Grid>
+                  <Component />
+                </Grid>
+              )}
+            />
+          );
+        })}
       </Container>
     </BrowserRouter>
   );
