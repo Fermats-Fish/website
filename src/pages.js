@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Grid } from "@material-ui/core";
+
 import HomePage from "./Pages/HomePage";
+import NavPage from "./Pages/NavPage";
 import UnityProject from "./Components/UnityProject";
 import AboutMePage from "./Pages/AboutMePage";
-import { Grid } from "@material-ui/core";
 
 const unityProject = (project, title, description) => ({
   title: title,
@@ -17,6 +19,10 @@ const pages = {
   home: {
     url: "/",
     component: HomePage,
+  },
+  nav: {
+    url: "/nav",
+    component: NavPage,
   },
   ld38: unityProject("ld38", "Ludum Dare 38 - Two Dot", [
     "This is a test",

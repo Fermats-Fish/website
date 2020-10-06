@@ -1,38 +1,57 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-import { ListItemText, ListItem, List } from "@material-ui/core";
+import { Typography, Grid, Button } from "@material-ui/core";
 
-import { sections } from "../pages";
+import pages from "../pages";
 
-const HomePage = () => {
+const HomePage = ({ ...otherProps }) => {
   const history = useHistory();
-
   return (
-    <List>
-      {sections.map((section) => (
-        <React.Fragment key={section.title}>
-          <ListItem>
-            <ListItemText
-              primaryTypographyProps={{ variant: "h3" }}
-              primary={section.title}
-            />
-          </ListItem>
-          {section.pages.map((page) => (
-            <ListItem
-              button
-              key={page.url}
-              onClick={() => history.push(page.url)}
-            >
-              <ListItemText
-                primaryTypographyProps={{ variant: "h5" }}
-                primary={page.title}
-              />
-            </ListItem>
-          ))}
-        </React.Fragment>
-      ))}
-    </List>
+    <>
+      <Grid item>
+        <Typography variant="h3">Welcome to My Website</Typography>
+      </Grid>
+      <Grid item>
+        <Typography>
+          I am a talented junior full stack developer, who enjoys working on a
+          large number of personal projects.
+        </Typography>
+      </Grid>
+      <Grid item>
+        <Typography>
+          This website serves as a platform for hosting many of my projects, and
+          as a way for you to find out more about me.
+        </Typography>
+      </Grid>
+      <Grid style={{ width: "100%", textAlign: "center" }} item>
+        <img
+          style={{
+            borderStyle: "solid",
+            borderWidth: 1,
+            borderColor: "black",
+            borderRadius: 1000,
+          }}
+          alt="Me"
+          src="images/profile-square.png"
+        />
+      </Grid>
+      <Grid item>
+        <Typography>
+          Click on the button below to get started, or open the navigation panel
+          by clicking in the top left corner of your screen.
+        </Typography>
+      </Grid>
+      <Grid item>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => history.push(pages.nav.url)}
+        >
+          Go to Navigation
+        </Button>
+      </Grid>
+    </>
   );
 };
 

@@ -15,6 +15,9 @@ const AboutMePage = ({ ...otherProps }) => {
           solutions will sometimes involve the development of a web application.
         </Typography>
       </Grid>
+      <Grid style={{ width: "100%", textAlign: "center" }} item>
+        <img alt="Me" style={{ width: 300 }} src="images/tramping1.jpg" />
+      </Grid>
       <Grid item>
         <Typography>
           When I'm not working with clients I spend time working on in house
@@ -29,6 +32,9 @@ const AboutMePage = ({ ...otherProps }) => {
           or require manual approval. I developed the application using React JS
           and ASP.NET Core.
         </Typography>
+      </Grid>
+      <Grid style={{ width: "100%", textAlign: "center" }} item>
+        <img alt="Me" style={{ width: 300 }} src="images/tramping4.jpg" />
       </Grid>
       <Grid item>
         <Typography>
