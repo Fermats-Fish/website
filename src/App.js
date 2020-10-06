@@ -38,6 +38,7 @@ const App = () => {
                   direction="column"
                   alignItems={align || "center"}
                   spacing={3}
+                  style={{ marginBottom: "2rem" }}
                 >
                   <Grid item className={classes.titleItem}>
                     <Typography variant="h3" className={classes.title}>

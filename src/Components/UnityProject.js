@@ -24,7 +24,7 @@ const UnityProject = ({ title, project, description }) => {
       {description &&
         description.map((x, index) => (
           <Grid className={classes.descriptionItem} key={index} item>
-            <Typography>{x === "" ? "\u200b" : x}</Typography>
+            {x}
           </Grid>
         ))}
     </>
