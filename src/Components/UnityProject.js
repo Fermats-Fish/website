@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, makeStyles, Grid } from "@material-ui/core";
+import { makeStyles, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   unityItem: {
