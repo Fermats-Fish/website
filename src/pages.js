@@ -311,7 +311,25 @@ const pages = {
   },
   ld47: unityProject(
     "ld47",
-    "Ludum Dare 47 (Team Submission) - Run Time Error - Infinite Loop Detected"
+    "Ludum Dare 47 (Team Submission) - Run Time Error - Infinite Loop Detected",
+    [
+      <Typography>
+        This was my second team submission to Ludum Dare. Unfortunately all of
+        us could only work on the game for part of the competition, but overall
+        I'm quite happy with the submission. I had always wanted to make a game
+        which requires the player to write code, and it was fun creating a
+        custom compiler for my own programming language.
+      </Typography>,
+      <Typography>
+        Like the other team submission to Ludum Dare we completed this game
+        within 72 hours. The link to our submission is here:{" "}
+        <a href="https://ldjam.com/events/ludum-dare/47/run-time-error-infinite-loop-detected">
+          Link
+        </a>{" "}
+        and the source code is available on GitHub here:{" "}
+        <a href="https://github.com/Fermats-Fish/Ludum-Dare-47">Link</a>.
+      </Typography>,
+    ]
   ),
   about: {
     title: "About Me",
