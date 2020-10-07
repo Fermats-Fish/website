@@ -43,7 +43,7 @@ const pages = {
     <Typography>
       I recently developed a second version of this game by re writing the code
       from scratch in a way that makes it really easy to create new puzzles and
-      mechanics colour.
+      mechanics.
     </Typography>,
     <Typography>
       The revised version is designed to work well on mobile devises, allowing
@@ -85,7 +85,10 @@ const pages = {
       This is one of the few more traditional real time games that I have made.
       I tend to avoid making these sorts of games since I prefer playing games
       that require more thinking. Despite this I learnt a lot about how Unity
-      works through this project, especially its physics engine.
+      works through this project. The thing I like the most about this game is
+      how the enemy robots will only go towards the player if they can see the
+      player, and how when the player goes out sight the robots will navigate to
+      the place that they saw the player last.
     </Typography>,
     <Typography>
       Like most of my games this one was made for the competition Ludum Dare in
@@ -117,9 +120,9 @@ const pages = {
       <a href="https://github.com/Fermats-Fish/Ludum-Dare-40">Link</a>.
     </Typography>,
     <Typography>
-      I really liked where this was going and ended up developing a post
-      competition version until well after the competition end date. The post
-      competition version improves on many of the features including a much
+      I really liked where this was going and ended up developing post
+      competition versions until well after the competition end date. The post
+      competition versions improved on many of the features including a much
       needed change to the colour palette used.
     </Typography>,
   ]),
@@ -196,10 +199,10 @@ const pages = {
   ),
   ld43: unityProject("ld43", "Ludum Dare 43 - Forest of Worship", [
     <Typography>
-      This game was an even more ambitious attempt than my last game. My idea
-      was to make a really strategical village building game, where you had to
-      manage different workers, and assign them jobs such as cutting down trees
-      or working farms etc.
+      This game was an even more ambitious attempt than my last ludum dare game.
+      My idea was to make a really strategical village building game, where you
+      had to manage different workers, and assign them jobs such as cutting down
+      trees or working farms etc.
     </Typography>,
     <Typography>
       Like I had learnt to do during Ludum Dare 40 I set about coding everything
@@ -299,12 +302,6 @@ const pages = {
             On the other hand the source code for this website can be accessed
             by the public here:{" "}
             <a href="https://github.com/Fermats-Fish/website">Link</a>.
-          </Typography>
-        </Grid>
-        <Grid item className="fullWidth">
-          <Typography>
-            The website was made using React JS and is hosted using an AWS S3
-            bucket.
           </Typography>
         </Grid>
       </>
