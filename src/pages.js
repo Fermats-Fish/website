@@ -18,10 +18,12 @@ const unityProject = (project, title, description, cover) => ({
 
 const pages = {
   home: {
+    drawerTitle: "Home",
     url: "/",
     component: HomePage,
   },
   nav: {
+    drawerTitle: "Navigation",
     url: "/nav",
     component: NavPage,
   },

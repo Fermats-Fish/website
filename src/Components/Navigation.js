@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core";
 import { Menu as MenuIcon, Home as HomeIcon } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
-import { sections } from "../pages";
+import pages, { sections } from "../pages";
 
 const drawerWidth = 300;
 
@@ -98,6 +98,22 @@ const Navigation = ({ ...otherProps }) => {
         onClose={() => setDrawerOpen(false)}
       >
         <List className={classes.list}>
+          {/* Home page and nav page */}
+          <ListItem button onClick={() => history.push(pages.home.url)}>
+            <ListItemText
+              primary={pages.home.drawerTitle}
+              primaryTypographyProps={{ variant: "h6" }}
+            />
+          </ListItem>
+          <ListItem button onClick={() => history.push(pages.nav.url)}>
+            <ListItemText
+              primary={pages.nav.drawerTitle}
+              primaryTypographyProps={{ variant: "h6" }}
+            />
+          </ListItem>
+
+          <Divider />
+
           {/* Navigation for each section */}
 
           {sections.map((section) => (
@@ -117,7 +133,7 @@ const Navigation = ({ ...otherProps }) => {
                   key={page.url}
                   onClick={() => history.push(page.url)}
                 >
-                  <ListItemText primary={page.title} />
+                  <ListItemText primary={page.drawerTitle || page.title} />
                 </ListItem>
               ))}
               <Divider />
