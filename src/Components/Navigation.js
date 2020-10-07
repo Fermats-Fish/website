@@ -25,6 +25,14 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+    overflowX: "hidden",
+  },
   title: {
     flexGrow: 1,
   },
@@ -42,8 +50,10 @@ const Navigation = ({ ...otherProps }) => {
 
   return (
     <>
+      {/* Top bar */}
       <AppBar>
         <Toolbar>
+          {/* Menu button */}
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -55,6 +65,8 @@ const Navigation = ({ ...otherProps }) => {
           >
             <MenuIcon />
           </IconButton>
+
+          {/* Home button */}
           <IconButton
             edge="start"
             className={classes.menuButton}
@@ -66,26 +78,39 @@ const Navigation = ({ ...otherProps }) => {
           >
             <HomeIcon />
           </IconButton>
+
+          {/* Title */}
           <Typography variant="h6" className={classes.title}>
             Tama's Website
           </Typography>
         </Toolbar>
       </AppBar>
+
+      {/* Side bar */}
       <Drawer
+        className={classes.drawer}
+        classes={{
+          paper: classes.drawerPaper,
+        }}
         variant="temporary"
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
         <List className={classes.list}>
+          {/* Navigation for each section */}
+
           {sections.map((section) => (
             <React.Fragment key={section.title}>
+              {/* Section title */}
               <ListItem>
                 <ListItemText
                   primaryTypographyProps={{ variant: "h5" }}
                   primary={section.title}
                 />
               </ListItem>
+
+              {/* Section pages */}
               {section.pages.map((page) => (
                 <ListItem
                   button
