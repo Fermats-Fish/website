@@ -55,8 +55,6 @@ const NavPage = () => {
             <Grid
               item
               key={page.url}
-              onMouseOver={() => setHover(page.url)}
-              onMouseOut={() => setHover(null)}
               xs={12}
               sm={6}
               md={4}
@@ -65,7 +63,11 @@ const NavPage = () => {
                 hover != null && page.url !== hover ? classes.blur : null
               }
             >
-              <div className={classes.project}>
+              <div
+                className={classes.project}
+                onMouseOver={() => setHover(page.url)}
+                onMouseOut={() => setHover(null)}
+              >
                 <img
                   className={
                     classes.image +
