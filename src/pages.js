@@ -7,8 +7,9 @@ import NavPage from "./Pages/NavPage";
 import UnityProject from "./Components/UnityProject";
 import AboutMePage from "./Pages/AboutMePage";
 
-const unityProject = (project, title, description) => ({
+const unityProject = (project, title, description, cover) => ({
   title: title,
+  cover: cover || project + ".png",
   url: "/" + project,
   component: () => (
     <UnityProject title={title} project={project} description={description} />
@@ -306,12 +307,18 @@ const pages = {
         </Grid>
       </>
     ),
+    cover: "website.png",
   },
+  ld47: unityProject(
+    "ld47",
+    "Ludum Dare 47 (Team Submission) - Run Time Error - Infinite Loop Detected"
+  ),
   about: {
     title: "About Me",
     url: "/about",
     align: "flex-start",
     component: AboutMePage,
+    cover: "about.png",
   },
 };
 
@@ -335,6 +342,7 @@ export const sections = [
       pages.ld45,
       pages.ld46,
       pages.website,
+      pages.ld47,
     ],
   },
 ];
