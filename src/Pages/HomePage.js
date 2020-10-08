@@ -18,12 +18,6 @@ const HomePage = () => {
           working on a large number of personal projects.
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography>
-          This website serves as a platform for hosting many of my projects, and
-          also as a way for you to find out more about me.
-        </Typography>
-      </Grid>
       <Grid style={{ width: "100%", textAlign: "center" }} item>
         <img
           style={{
@@ -38,8 +32,8 @@ const HomePage = () => {
       </Grid>
       <Grid item>
         <Typography>
-          Click on the button below to get started, or open the navigation panel
-          by clicking in the top left corner of your screen.
+          This website serves as a platform for hosting many of my projects, and
+          also as a way for you to find out more about me.
         </Typography>
       </Grid>
       <Grid item>
