@@ -57,7 +57,7 @@ const AboutMePage = ({ ...otherProps }) => {
       <Grid item>
         <Typography>
           My main interests range from anything which involves complex logical
-          thinking to going tramping and listening to classical music.
+          thinking to going tramping and playing classical piano and violin.
         </Typography>
       </Grid>
     </>
