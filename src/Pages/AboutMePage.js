@@ -2,7 +2,7 @@ import React from "react";
 
 import { Grid, Typography } from "@material-ui/core";
 
-const AboutMePage = ({ ...otherProps }) => {
+const AboutMePage = () => {
   return (
     <>
       <Grid item>

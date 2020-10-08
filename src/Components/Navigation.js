@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Navigation = ({ ...otherProps }) => {
+const Navigation = () => {
   const classes = useStyles();
   const history = useHistory();
 

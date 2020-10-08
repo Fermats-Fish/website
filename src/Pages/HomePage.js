@@ -5,7 +5,7 @@ import { Typography, Grid, Button } from "@material-ui/core";
 
 import pages from "../pages";
 
-const HomePage = ({ ...otherProps }) => {
+const HomePage = () => {
   const history = useHistory();
   return (
     <>
