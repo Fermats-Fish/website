@@ -14,14 +14,14 @@ const HomePage = ({ ...otherProps }) => {
       </Grid>
       <Grid item>
         <Typography>
-          I am a talented junior full stack developer, who enjoys working on a
-          large number of personal projects.
+          I am Tama Austin, a talented junior full stack developer who enjoys
+          working on a large number of personal projects.
         </Typography>
       </Grid>
       <Grid item>
         <Typography>
           This website serves as a platform for hosting many of my projects, and
-          as a way for you to find out more about me.
+          also as a way for you to find out more about me.
         </Typography>
       </Grid>
       <Grid style={{ width: "100%", textAlign: "center" }} item>
