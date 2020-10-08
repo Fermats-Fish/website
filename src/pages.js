@@ -10,7 +10,7 @@ import JobHistoryPage from "./Pages/JobHistoryPage";
 
 const unityProject = (project, title, description, cover) => ({
   title: title,
-  cover: cover || project + ".png",
+  cover: cover || project + ".jpg",
   url: "/" + project,
   component: () => (
     <UnityProject title={title} project={project} description={description} />
@@ -310,7 +310,7 @@ const pages = {
         </Grid>
       </>
     ),
-    cover: "website.png",
+    cover: "website.jpg",
   },
   ld47: unityProject(
     "ld47",
