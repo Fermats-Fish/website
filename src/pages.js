@@ -14,7 +14,12 @@ const unityProject = (project, title, description, cover) => ({
   cover: cover || project + ".jpg",
   url: "/" + project,
   component: () => (
-    <UnityProject title={title} project={project} description={description} />
+    <UnityProject
+      title={title}
+      project={project}
+      cover={cover || project + ".jpg"}
+      description={description}
+    />
   ),
 });
 
