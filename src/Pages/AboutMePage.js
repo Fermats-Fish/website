@@ -16,7 +16,11 @@ const AboutMePage = ({ ...otherProps }) => {
         </Typography>
       </Grid>
       <Grid style={{ width: "100%", textAlign: "center" }} item>
-        <img alt="Me" style={{ width: 300 }} src="images/tramping1.jpg" />
+        <img
+          alt="Me At a Computer"
+          style={{ width: 600 }}
+          src="images/working2.jpg"
+        />
       </Grid>
       <Grid item>
         <Typography>
@@ -34,7 +38,11 @@ const AboutMePage = ({ ...otherProps }) => {
         </Typography>
       </Grid>
       <Grid style={{ width: "100%", textAlign: "center" }} item>
-        <img alt="Me" style={{ width: 300 }} src="images/tramping4.jpg" />
+        <img
+          alt="Me Tramping"
+          style={{ width: 300 }}
+          src="images/tramping1.jpg"
+        />
       </Grid>
       <Grid item>
         <Typography>

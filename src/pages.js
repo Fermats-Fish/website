@@ -6,6 +6,7 @@ import HomePage from "./Pages/HomePage";
 import NavPage from "./Pages/NavPage";
 import UnityProject from "./Components/UnityProject";
 import AboutMePage from "./Pages/AboutMePage";
+import JobHistoryPage from "./Pages/JobHistoryPage";
 
 const unityProject = (project, title, description, cover) => ({
   title: title,
@@ -340,12 +341,19 @@ const pages = {
     component: AboutMePage,
     cover: "about.png",
   },
+  jobHistory: {
+    title: "Job History",
+    url: "/jobs",
+    align: "flex-start",
+    component: JobHistoryPage,
+    cover: "work.jpg",
+  },
 };
 
 export const sections = [
   {
     title: "About",
-    pages: [pages.about],
+    pages: [pages.about, pages.jobHistory],
   },
   {
     title: "Projects",
@@ -361,8 +369,8 @@ export const sections = [
       pages.ld43,
       pages.ld45,
       pages.ld46,
-      pages.website,
       pages.ld47,
+      pages.website,
     ],
   },
 ];

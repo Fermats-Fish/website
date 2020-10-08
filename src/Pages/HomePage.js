@@ -48,7 +48,7 @@ const HomePage = ({ ...otherProps }) => {
           color="primary"
           onClick={() => history.push(pages.nav.url)}
         >
-          Go to Navigation
+          Enter
         </Button>
       </Grid>
     </>

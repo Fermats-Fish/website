@@ -3,6 +3,10 @@ iframe {
   height: 100%;
 }
 
+img {
+  max-width: 100%;
+}
+
 .fullWidth {
   width: 100%;
 }

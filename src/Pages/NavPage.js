@@ -59,9 +59,6 @@ const NavPage = () => {
               sm={6}
               md={4}
               onClick={() => history.push(page.url)}
-              className={
-                hover != null && page.url !== hover ? classes.blur : null
-              }
             >
               <div
                 className={classes.project}
@@ -71,7 +68,10 @@ const NavPage = () => {
                 <img
                   className={
                     classes.image +
-                    (page.url === hover ? " " + classes.imageHover : "")
+                    (page.url === hover ? " " + classes.imageHover : "") +
+                    (hover != null && page.url !== hover
+                      ? " " + classes.blur
+                      : "")
                   }
                   src={"images/covers/" + page.cover}
                   alt={page.title}
