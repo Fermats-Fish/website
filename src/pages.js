@@ -7,6 +7,7 @@ import NavPage from "./Pages/NavPage";
 import UnityProject from "./Components/UnityProject";
 import AboutMePage from "./Pages/AboutMePage";
 import JobHistoryPage from "./Pages/JobHistoryPage";
+import TechPage from "./Pages/TechPage";
 
 const unityProject = (project, title, description, cover) => ({
   title: title,
@@ -341,6 +342,13 @@ const pages = {
     component: AboutMePage,
     cover: "about.jpg",
   },
+  technologies: {
+    title: "Technologies",
+    url: "/technologies",
+    align: "flex-start",
+    component: TechPage,
+    cover: "technologies.jpg",
+  },
   jobHistory: {
     title: "Job History",
     url: "/jobs",
@@ -353,7 +361,7 @@ const pages = {
 export const sections = [
   {
     title: "About",
-    pages: [pages.about, pages.jobHistory],
+    pages: [pages.about, pages.jobHistory, pages.technologies],
   },
   {
     title: "Projects",
