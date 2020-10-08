@@ -19,7 +19,7 @@ const AboutMePage = () => {
         <img
           alt="Me At a Computer"
           style={{ width: 600 }}
-          src="images/working2.jpg"
+          src="images/working.jpg"
         />
       </Grid>
       <Grid item>
@@ -41,7 +41,7 @@ const AboutMePage = () => {
         <img
           alt="Me Tramping"
           style={{ width: 300 }}
-          src="images/tramping1.jpg"
+          src="images/tramping.jpg"
         />
       </Grid>
       <Grid item>
