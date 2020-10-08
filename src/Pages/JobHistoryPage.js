@@ -28,8 +28,7 @@ const JobHistoryPage = () => {
         <Typography>
           This role is being made redundant at the end of October due to a
           merger, however I really enjoyed my time working here, and through
-          this job I have gained lots of experience in a wide range of
-          technologies.
+          this job I have gained experience in a wide range of technologies.
         </Typography>
       </Grid>
       <Grid item>
@@ -41,7 +40,7 @@ const JobHistoryPage = () => {
         <ul>
           {listItems(
             "Guiding clients and recommending the most suitable tool for a task, most commonly UiPath or C#.",
-            "Web application development when applicable, using React JS and ASP.Net Core.",
+            "Web application development, using React JS and ASP.Net Core.",
             "Interacting with clients directly, both remotely and on site as the only company representative.",
             "Design, development, deployment, and support for the following client projects (amongst others):"
           )}
