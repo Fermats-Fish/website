@@ -339,7 +339,7 @@ const pages = {
     url: "/about",
     align: "flex-start",
     component: AboutMePage,
-    cover: "about.png",
+    cover: "about.jpg",
   },
   jobHistory: {
     title: "Job History",
