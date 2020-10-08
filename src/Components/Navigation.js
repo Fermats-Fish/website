@@ -6,11 +6,11 @@ import {
   IconButton,
   Typography,
   makeStyles,
-  Drawer,
   List,
   ListItem,
   Divider,
   ListItemText,
+  SwipeableDrawer,
 } from "@material-ui/core";
 import { Menu as MenuIcon, Home as HomeIcon } from "@material-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -87,7 +87,7 @@ const Navigation = ({ ...otherProps }) => {
       </AppBar>
 
       {/* Side bar */}
-      <Drawer
+      <SwipeableDrawer
         className={classes.drawer}
         classes={{
           paper: classes.drawerPaper,
@@ -96,16 +96,29 @@ const Navigation = ({ ...otherProps }) => {
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
+        onOpen={() => setDrawerOpen(true)}
       >
         <List className={classes.list}>
           {/* Home page and nav page */}
-          <ListItem button onClick={() => history.push(pages.home.url)}>
+          <ListItem
+            button
+            onClick={() => {
+              history.push(pages.home.url);
+              setDrawerOpen(false);
+            }}
+          >
             <ListItemText
               primary={pages.home.drawerTitle}
               primaryTypographyProps={{ variant: "h6" }}
             />
           </ListItem>
-          <ListItem button onClick={() => history.push(pages.nav.url)}>
+          <ListItem
+            button
+            onClick={() => {
+              history.push(pages.nav.url);
+              setDrawerOpen(false);
+            }}
+          >
             <ListItemText
               primary={pages.nav.drawerTitle}
               primaryTypographyProps={{ variant: "h6" }}
@@ -131,7 +144,10 @@ const Navigation = ({ ...otherProps }) => {
                 <ListItem
                   button
                   key={page.url}
-                  onClick={() => history.push(page.url)}
+                  onClick={() => {
+                    history.push(page.url);
+                    setDrawerOpen(false);
+                  }}
                 >
                   <ListItemText primary={page.drawerTitle || page.title} />
                 </ListItem>
@@ -140,7 +156,7 @@ const Navigation = ({ ...otherProps }) => {
             </React.Fragment>
           ))}
         </List>
-      </Drawer>
+      </SwipeableDrawer>
       <div className={classes.offset} />
     </>
   );
