@@ -20,8 +20,8 @@ const JobHistoryPage = () => {
       </Grid>
       <Grid item>
         <Typography variant="h5">
-          Junior Developer and Solution Designer - Probotics (March 2020 -
-          October 2020)
+          Junior RPA/Full Stack Developer and Solution Designer - Probotics
+          (March 2020 - October 2020)
         </Typography>
       </Grid>
       <Grid item>
